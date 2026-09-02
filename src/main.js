@@ -1,3 +1,5 @@
+import { createIcons, icons } from 'lucide';
+createIcons({ icons })
 import '/src/style.css'; // Make sure the path points to your Tailwind CSS file
 import { Chart, registerables } from 'chart.js';
 
