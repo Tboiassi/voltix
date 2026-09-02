@@ -80,3 +80,34 @@ if (canvas) {
 }
 
 // index point
+// 
+// menu
+
+const menuBtn       = document.getElementById('menu-btn');
+const mobileMenu    = document.getElementById('mobile-menu');
+const hamburgerIcon = document.getElementById('hamburger-icon');
+const closeIcon     = document.getElementById('close-icon');
+
+if (menuBtn && mobileMenu && hamburgerIcon && closeIcon) {
+   function openMenu() {
+      mobileMenu.classList.add('open');
+      hamburgerIcon.classList.add('opacity-0', 'rotate-90', 'pointer-events-none');
+      hamburgerIcon.classList.remove('opacity-100', 'rotate-0');
+      closeIcon.classList.remove('opacity-0', '-rotate-90', 'pointer-events-none');
+      closeIcon.classList.add('opacity-100', 'rotate-0');
+   }
+
+   function closeMenu() {
+      mobileMenu.classList.remove('open');
+      hamburgerIcon.classList.remove('opacity-0', 'rotate-90', 'pointer-events-none');
+      hamburgerIcon.classList.add('opacity-100', 'rotate-0');
+      closeIcon.classList.add('opacity-0', '-rotate-90', 'pointer-events-none');
+      closeIcon.classList.remove('opacity-100', 'rotate-0');
+   }
+
+   menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.contains('open') ? closeMenu() : openMenu();
+   });
+
+   mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+}
