@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+   <html class="scroll-smooth">
+      <head>
+         <meta charset="UTF-8" />
+         <link rel="icon" type="image/svg+xml" href="./src/assets/logo.png" />
+         <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+         />
+         <link rel="stylesheet" href="/src/style.css" />
+         <title>Admin Dashboard</title>
+      </head>
+      <body class="universal">
+      <header
+         class="fixed top-0 z-50 w-full h-16 flex justify-between items-center px-margin-mobile md:px-margin-desktop bg-surface/80 backdrop-blur-md border-b border-white/10"
+      >
+         <div class="flex items-center gap-4">
+            <a href="index.html" class="text-cyan-400 font-headline-md font-bold text-xl tracking-tight mx-4">Voltix</a>
+            <div class="hidden md:flex px-3 py-1 bg-white/10 border border-cyan-300 rounded-lg">
+               <span class="text-cyan-300 font-bold">ADMIN CONTROL</span>
+            </div>
+         </div>
+         <div class="flex items-center gap-stack-md mr-4">
+            <button class="p-2 text-slate-300 hover:bg-white/20 transition-colors rounded-full">
+               <i data-lucide="bell"></i>
+            </button>
+            <div class="flex items-center gap-3 p-1.5 pl-3 bg-white/10 rounded-full text-cyan-300 border border-white/5 cursor-pointer hover:bg-white/30 transition-all">
+               <span class="text-slate-300 hidden md:inline">Master Admin</span>
+               <i data-lucide="circle-user"></i>
+            </div>
+         </div>
+      </header>
+      <div class="flex h-screen pt-16">
+         <!-- Desktop Side Nav -->
+         <aside class="fixed hidden md:flex flex-col justify-between h-[calc(100vh-4rem)] border-r border-white/5 w-64 p-4">
+            <!-- Upper Section: Operations & Navigation -->
+            <div class="flex-1 space-y-1">
+               <div class="mb-2 py-3">
+                  <p class="text-slate-300 text-xs font-bold uppercase tracking-widest opacity-50">
+                     Operations
+                  </p>
+               </div>
+               <nav class="space-y-1 text-slate-300">
+                  <a class="flex items-center gap-3 px-4 py-3 bg-white/10 text-cyan-300 rounded-lg transition-all" href="#">
+                     <i data-lucide="layout-dashboard"></i>
+                     <span class="text-sm">Dashboard</span>
+                  </a>
+                  <a class="flex items-center gap-3 px-4 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+                     <i data-lucide="folder-clock"></i>
+                     <span class="text-sm">Transactions</span>
+                  </a>
+                  <a class="flex items-center gap-3 px-4 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+                     <i data-lucide="folder-open"></i>
+                     <span class="text-sm">Meter Directory</span>
+                  </a>
+                  <a class="flex items-center gap-3 px-4 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+                     <i data-lucide="tag-plus"></i>
+                     <span class="text-sm">Support Ticketing</span>
+                  </a>
+                  <a class="flex items-center gap-3 px-4 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="settings.html">
+                     <i data-lucide="settings"></i>
+                     <span class="text-sm">Global Settings</span>
+                  </a>
+               </nav>
+            </div>
+         
+            <!-- Lower Section: Grid Status pinned to the bottom -->
+            <div class="p-3 glass-panel rounded-xl backdrop-blur-md bg-white/10 border border-white/5">
+               <p class="text-cyan-400 font-bold text-xs uppercase tracking-wider mb-2">
+                  Grid Status
+               </p>
+               <div class="flex items-center gap-2">
+                  <div class="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_10px_rgba(77,224,130,0.5)]"></div>
+                  <span class="text-slate-300 text-sm">System Stable</span>
+               </div>
+            </div>
+         </aside>
+         
+         <!-- Main Content Area -->
+         <main class="flex-2 mx-auto max-w-7xl md:pl-64">
+            <!-- KPI Row -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 py-6 m-4">
+               <!-- KPI 1 -->
+               <div class="bg-white/10 p-4 rounded-xl hover:shadow-[0_0_20px_rgba(142,213,255,0.1)] transition-all group">
+                  <div class="flex justify-between items-start mb-4">
+                     <div class="p-2 bg-blue-500 rounded-xl text-cyan-300">
+                        <i data-lucide="zap"></i>
+                     </div>
+                     <span class="text-green-400 text-xs font-bold">+12.5%</span>
+                  </div>
+                  <p class="text-slate-300 font-label-md text-on-surface-variant">Total kWh Distributed</p>
+                  <h2 class="text-cyan-300 font-mono mt-1 text-2xl group-hover:scale-105 transition-transform origin-left">
+                     1,284,502.4
+                  </h2>
+               </div>
+               <!-- KPI 2 -->
+               <div class="bg-white/10 p-4 rounded-xl hover:shadow-[0_0_20px_rgba(77,224,130,0.1)] transition-all group">
+                  <div class="flex justify-between items-start mb-4">
+                     <div class="p-2 bg-green-500 rounded-lg text-lime-300">
+                        <i data-lucide="banknote"></i>
+                     </div>
+                     <span class="text-green-400 text-xs font-bold">+5.2%</span>
+                  </div>
+                  <p class="text-slate-300 font-label-md text-on-surface-variant">Revenue Collected (₦)</p>
+                  <h2 class="text-slate-300 font-mono mt-1 text-2xl group-hover:scale-105 transition-transform origin-left">
+                     ₦42,904,000
+                  </h2>
+               </div>
+               <!-- KPI 3 -->
+               <div class="bg-white/10 p-4 rounded-xl hover:shadow-[0_0_20px_rgba(255,193,116,0.1)] transition-all group">
+                  <div class="flex justify-between items-start mb-4">
+                     <div class="p-2 bg-amber-400 rounded-lg text-amber-200">
+                        <i data-lucide="users-round"></i>
+                     </div>
+                     <span class="text-slate-400 text-xs">98% Online</span>
+                  </div>
+                  <p class="text-slate-300 font-label-md text-on-surface-variant">Active Meters</p>
+                  <h2 class="text-slate-300 font-mono mt-1 text-2xl group-hover:scale-105 transition-transform origin-left">
+                     8,214
+                  </h2>
+               </div>
+               <!-- KPI 4 -->
+               <div class="bg-white/10 p-4 rounded-xl hover:shadow-[0_0_20px_rgba(255,180,171,0.1)] transition-all group">
+                  <div class="flex justify-between items-start mb-4">
+                     <div class="p-2 bg-red-400 rounded-lg text-red-300">
+                        <i data-lucide="ticket"></i>
+                     </div>
+                     <span class="text-red-300 text-xs font-bold">14 High</span>
+                  </div>
+                  <p class="text-slate-300 font-label-md text-on-surface-variant">Open Tickets</p>
+                  <h2 class="text-slate-300 font-mono mt-1 text-2xl group-hover:scale-105 transition-transform origin-left">
+                     32
+                  </h2>
+               </div>
+            </div>
+            
+            <!-- Main Grid Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+               <!-- Resident Meter Directory (Left Column) -->
+               <div class="lg:col-span-2 flex flex-col gap-3 mx-4 rounded-xl p-3">
+                  <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                     <div>
+                        <h3 class="text-slate-300 text-2xl font-bold">Resident Meter Directory</h3>
+                        <p class="text-slate-300 font-meduim text-sm">
+                           Real-time status monitoring for all connected nodes.
+                        </p>
+                     </div>
+                     <div class="relative">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                           <i data-lucide="search" class="h-5 w-5 text-slate-400"></i>
+                        </div>
+                        <input
+                           class="w-full md:w-64 bg-white/10 border border-white/10 text-slate-300 rounded-xl px-4 py-2 pl-10 text-sm focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all outline-none"
+                           placeholder="Search Meter # or Address"
+                           type="text"
+                        />
+                     </div>
+                  </div>
+                  <div class="bg-white/10 backdrop-blur-md rounded-xl overflow-hidden">
+                     <div class="overflow-x-auto">
+                        <table class="w-full text-left text-slate-300 border-collapse">
+                           <thead class="bg-surface-container-high/50 border-b border-white/5">
+                              <tr>
+                                 <th class="px-6 py-4">Meter #</th>
+                                 <th class="px-6 py-4">House Address</th>
+                                 <th class="px-6 py-4">Balance</th>
+                                 <th class="px-6 py-4">Status</th>
+                              </tr>
+                           </thead>
+                           <tbody class="divide-y divide-white/5">
+                              <!-- Row 1 -->
+                              <tr class="hover:bg-white/5 transition-colors group">
+                                 <td class="px-6 py-4 font-medium text-sm text-cyan-300">#882104</td>
+                                 <td class="px-6 py-4 text-sm">Apt 4B, Emerald Heights</td>
+                                 <td class="px-6 py-4 text-sm font-mono">₦14,250.00</td>
+                                 <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/30 text-green-500 text-xs font-bold border border-green-500/10 backdrop-blur-md">
+                                       <span class="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_rgba(77,224,130,1)]"></span>
+                                       Active
+                                    </span>
+                                 </td>
+                              </tr>
+                              <!-- Row 2 -->
+                              <tr class="hover:bg-white/5 transition-colors group">
+                                 <td class="px-6 py-4 font-medium text-sm text-cyan-300">#901244</td>
+                                 <td class="px-6 py-4 text-sm">Unit 12, Pineview Estate</td>
+                                 <td class="px-6 py-4 text-sm font-mono text-red-300">₦1,200.50</td>
+                                 <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 text-xs font-bold border border-amber-400/20 backdrop-blur-md">
+                                       <span class="w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_5px_rgba(255,193,116,1)]"></span>
+                                       Low
+                                    </span>
+                                 </td>
+                              </tr>
+                              <!-- Row 3 -->
+                              <tr class="hover:bg-white/5 transition-colors group">
+                                 <td class="px-6 py-4 font-medium text-sm text-cyan-300">#776239</td>
+                                 <td class="px-6 py-4 text-sm">Main Block C, Tech City</td>
+                                 <td class="px-6 py-4 text-sm font-mono text-red-300">₦0.00</td>
+                                 <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-400/20 text-red-300 text-xs font-bold border border-red-400/20 backdrop-blur-md">
+                                       <span class="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse shadow-[0_0_8px_rgba(255,180,171,1)]"></span>
+                                       Critical
+                                    </span>
+                                 </td>
+                              </tr>
+                              <!-- Row 4 -->
+                              <tr class="hover:bg-white/5 transition-colors group">
+                                 <td class="px-6 py-4 font-medium text-sm text-cyan-300">#112093</td>
+                                 <td class="px-6 py-4 text-sm">Penthouse 1, Sky View</td>
+                                 <td class="px-6 py-4 text-sm font-mono">₦82,400.12</td>
+                                 <td class="px-6 py-4">
+                                    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-xs font-bold border border-green-500/20 backdrop-blur-md">
+                                       <span class="w-1.5 h-1.5 rounded-full bg-green-400 shadow-[0_0_5px_rgba(77,224,130,1)]"></span>
+                                       Active
+                                    </span>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class="px-6 py-4 bg-surface-container border-t border-white/5 flex items-center justify-between">
+                        <p class="text-xs text-slate-300 font-medium">Showing 4 of 8,214 meters</p>
+                        <div class="flex gap-2">
+                           <button class="p-1 px-3 border border-white/10 rounded-lg text-slate-300 text-xs hover:bg-white/5 transition-colors disabled:opacity-30" disabled>
+                              Prev
+                           </button>
+                           <button class="p-1 px-3 border border-white/10 rounded-lg text-slate-300 text-xs hover:bg-white/5 transition-colors">
+                              Next
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+               <!-- Ticket Resolution Board (Right Column) -->
+               <div class="flex flex-col gap-4">
+                  <div class="flex items-center justify-between">
+                     <h3 class="text-2xl font-bold text-slate-300">Support Tickets</h3>
+                     <span class="bg-red-300 text-red-500 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-tighter backdrop-blur-lg">Live Updates</span>
+                  </div>
+                  <div class="flex flex-col gap-3 h-full max-h-150 overflow-y-auto pr-1 custom-scrollbar">
+                     <!-- Ticket 1 -->
+                     <div class="bg-white/10 backdrop-blur-md p-4 mx-3 rounded-xl border-l-4 border-red-300">
+                        <div class="flex justify-between items-start mb-2">
+                           <span class="text-xs text-slate-300 font-mono">ID #TK-2291</span>
+                           <span class="text-[10px] bg-white/10 px-2 py-0.5 rounded text-slate-300">2m ago</span>
+                        </div>
+                        <h4 class="text-xl text-slate-300 font-bold mb-1">Meter not reflecting token</h4>
+                        <p class="text-xs text-slate-300 line-clamp-2 mb-4">
+                           "Purchased ₦5,000 energy but the meter unit is still showing zero. Please check urgently..."
+                        </p>
+                        <div class="flex items-center justify-between pt-2 border-t border-white/10">
+                           <div class="flex items-center gap-2">
+                              <div class="w-6 h-6 rounded-full bg-white/20 text-blue-300 backdrop-blur-md flex items-center justify-center">
+                                 <i data-lucide="user"></i>
+                              </div>
+                              <span class="text-[11px] text-slate-300">John Doe</span>
+                           </div>
+                           <div class="flex gap-1">
+                              <button class="px-3 py-1 bg-cyan-300 text-slate-900 text-[10px] font-bold rounded-lg hover:scale-105 active:scale-95 transition-all">
+                                 Respond
+                              </button>
+                              <button class="px-3 py-1 bg-white/10 text-slate-300 text-[10px] font-bold rounded-lg hover:bg-white/20 active:scale-95 transition-all">
+                                 Dismiss
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+      
+                     <!-- Ticket 2 -->
+                     <div class="bg-white/10 backdrop-blur-md p-4 mx-3 rounded-xl border-l-4 border-amber-400">
+                        <div class="flex justify-between items-start mb-2">
+                           <span class="text-xs text-slate-300 font-mono">ID #TK-2290</span>
+                           <span class="text-[10px] bg-white/10 px-2 py-0.5 rounded text-slate-300">15m ago</span>
+                        </div>
+                        <h4 class="text-xl text-slate-300 font-bold mb-1">Low Voltage Warning</h4>
+                        <p class="text-xs text-slate-300 line-clamp-2 mb-4">
+                           "My appliances keep turning off and the meter is flashing an error code for low voltage..."
+                        </p>
+                        <div class="flex items-center justify-between pt-2 border-t border-white/10">
+                           <div class="flex items-center gap-2">
+                              <div class="w-6 h-6 rounded-full bg-white/20 text-amber-300 backdrop-blur-md flex items-center justify-center">
+                                 <i data-lucide="user"></i>
+                              </div>
+                              <span class="text-[11px] text-slate-300">Jane Smith</span>
+                           </div>
+                           <div class="flex gap-1">
+                              <button class="px-3 py-1 bg-cyan-300 text-slate-900 text-[10px] font-bold rounded-lg hover:scale-105 active:scale-95 transition-all">
+                                 Respond
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Closed Tocket -->
+                     <div class="bg-white/10 backdrop-blur-md p-4 mx-3 rounded-xl">
+                        <div class="flex justify-between items-start mb-2">
+                           <span class="text-xs text-slate-300 font-mono">ID #TK-2285</span>
+                           <div class="text-green-300 flex items-center justify-between">
+                              <i data-lucide="badge-check"></i>
+                              <span class="text-[12px] text-green-300">
+                                 Resolved
+                              </span>
+                           </div>
+                        </div>
+                        <h4 class="text-slate-300 font-bold mb-1">Change to meter ownership</h4>
+                        <p class="text-slate-300 text-sm mb-2">Request to transfer account #8812 to new...</p>
+                        <hr class="text-slate-400">
+                        <p class="text-slate-300 font-mono mt-2">Closed by admin</p>
+                     </div>
+                     <div class="flex items-center justify-center bg-white/10 border border-cyan-300 p-3 rounded-xl mx-3 text-cyan-300 hover:bg-white/20 transition-all duration-500ms">
+                        <button>View All Tickets</button>
+                        <i data-lucide="arrow-right"></i>
+                     </div>
+                     
+                  </div>
+               </div>
+            </div>
+         </main>
+      </div>
+
+         <script src="./node_modules/lucide/dist/umd/lucide.min.js"></script>
+         <script src="./js/lucide.min.js"></script>
+         <script>
+            lucide.createIcons();
+         </script>
+         <script type="module" src="/src/main.js"></script>
+      </body>
+   </html>
+</html>

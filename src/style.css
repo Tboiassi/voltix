@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+   .universal {
+      @apply bg-blue-950 transition-all duration-500 box-border m-0 p-0 ;
+   }
+   .top-nav {
+      @apply flex justify-between items-center p-3 top-0 sticky z-10 bg-white/10 backdrop-blur-md shadow-lg;
+   }
+   .top-nav h2 {
+      @apply text-blue-300 font-bold text-xl;
+   }
+   .top-nav ul {
+      @apply hidden md:flex gap-4;
+   }
+   .sublink {
+      @apply text-white hover:text-cyan-300 transition-all duration-500;
+   }
+   .top-btn {
+      @apply bg-cyan-300 text-blue-950 px-4 py-2 rounded-xl font-bold hover:bg-cyan-600 hover:text-cyan-300 transition-all duration-500;
+   }
+   .app-btn {
+      @apply bg-blue-950 text-slate-300 px-4 py-2 rounded-xl font-bold hover:bg-white/10 hover:text-cyan-300 transition-all duration-500 border hover:border-cyan-300;
+   }
+   section {
+      @apply mt-20 mx-auto max-w-full;
+   }
+   .caseD {
+      @apply bg-white/10 p-4 rounded-xl shadow-lg mb-2;
+   }
+}

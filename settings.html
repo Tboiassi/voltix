@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+   <html class="scroll-smooth">
+      <head>
+         <meta charset="UTF-8" />
+         <link rel="icon" type="image/svg+xml" href="./src/assets/logo.png" />
+         <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+         />
+         <link rel="stylesheet" href="/src/style.css" />
+         <title>Global Settings</title>
+      </head>
+      <body class="universal">
+         <!-- Top Navigation Bar -->
+         <header
+            class="fixed top-0 z-50 w-full h-16 flex justify-between items-center px-margin-mobile md:px-margin-desktop bg-surface/80 backdrop-blur-md border-b border-white/10"
+         >
+            <div class="flex items-center gap-4">
+               <a href="index.html"
+                  class="text-cyan-400 font-headline-md font-bold text-xl tracking-tight mx-4"
+                  >Voltix</a
+               >
+               <p
+                  class="bg-white/10 py-1 px-2 rounded-full text-slate-400 flex items-center"
+               >
+                  <i data-lucide="database-zap"></i> Meter #4402-9912
+               </p>
+            </div>
+            <div class="flex items-center gap-stack-md mr-4">
+               <div
+                  class="p-2 bg-white/10 rounded-full text-cyan-300 border border-white/5 cursor-pointer hover:bg-white/30 transition-all"
+               >
+                  <i data-lucide="circle-user"></i>
+               </div>
+            </div>
+         </header>
+
+         <!-- Desktop Side Nav (Full View Height) -->
+         <aside
+            class="fixed top-16 left-0 hidden md:flex flex-col justify-between h-[calc(100vh-4rem)] border-r border-white/5 w-64 p-4 z-40"
+         >
+            <!-- Upper Section: Operations & Navigation -->
+            <div class="flex-1 space-y-1">
+               <div class="mb-2 py-3">
+                  <p
+                     class="text-slate-300 text-xs font-bold uppercase tracking-widest opacity-50"
+                  >
+                     Operations
+                  </p>
+               </div>
+               <nav class="space-y-1 text-slate-300">
+                  <a
+                     class="flex items-center gap-3 px-4 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-all"
+                     href="admin.html"
+                  >
+                     <i data-lucide="layout-dashboard"></i>
+                     <span class="text-sm">Dashboard</span>
+                  </a>
+                  <a
+                     class="flex items-center gap-3 px-4 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-all"
+                     href="#"
+                  >
+                     <i data-lucide="folder-clock"></i>
+                     <span class="text-sm">Transactions</span>
+                  </a>
+                  <a
+                     class="flex items-center gap-3 px-4 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-all"
+                     href="#"
+                  >
+                     <i data-lucide="folder-open"></i>
+                     <span class="text-sm">Meter Directory</span>
+                  </a>
+                  <a
+                     class="flex items-center gap-3 px-4 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-all"
+                     href="#"
+                  >
+                     <i data-lucide="tag-plus"></i>
+                     <span class="text-sm">Support Ticketing</span>
+                  </a>
+                  <a
+                     class="flex items-center gap-3 px-4 py-3 bg-white/10 text-cyan-300 rounded-lg transition-all"
+                     href="#"
+                  >
+                     <i data-lucide="settings"></i>
+                     <span class="text-sm">Global Settings</span>
+                  </a>
+               </nav>
+            </div>
+
+            <!-- Lower Section: Grid Status pinned to the bottom -->
+            <div
+               class="p-3 glass-panel rounded-xl backdrop-blur-md bg-white/10 border border-white/5"
+            >
+               <p
+                  class="text-cyan-400 font-mono text-xs uppercase tracking-wider mb-2"
+               >
+                  Low Balance?
+               </p>
+               <div
+                  class="flex items-center justify-center bg-white/10 border border-cyan-300 p-3 rounded-xl text-cyan-300 hover:bg-white/20 transition-all duration-500ms"
+               >
+                  <button>Buy Energy</button>
+               </div>
+            </div>
+         </aside>
+
+         <main class="flex-1 md:ml-64 px-4 md:px-4 py-4 pb-32">
+            <div class="max-w-4xl mx-auto space-y-auto">
+               <!-- Section Header -->
+               <section>
+                  <h1 class="font-bold md:text-2xl text-2xl text-slate-300">
+                     Account Settings
+                  </h1>
+                  <p class="text-md text-slate-400 mt-1 mb-3">
+                     Manage your residency details, payment methods, and
+                     security preferences.
+                  </p>
+               </section>
+
+               <!-- Bento Grid Layout for Settings -->
+               <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+                  <!-- Account Profile Card -->
+                  <div
+                     class="lg:col-span-8 bg-white/10 rounded-xl p-4 shadow-md transition-all"
+                  >
+                     <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-md font-bold text-cyan-300">
+                           Account Profile
+                        </h2>
+                        <button
+                           class="text-md font-bold text-cyan-300 flex items-center hover:underline"
+                        >
+                           <i data-lucide="square-pen" class="w-4 h-4 mr-1"></i>
+                           Edit
+                        </button>
+                     </div>
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                           <label class="text-md font-light text-slate-300"
+                              >Full Name</label
+                           >
+                           <p class="text-md font-medium text-slate-300">
+                              Babatunde Olawale
+                           </p>
+                        </div>
+                        <div class="space-y-1">
+                           <label class="text-md font-light text-slate-300"
+                              >Unit / Block</label
+                           >
+                           <p class="text-md font-medium text-slate-300">
+                              Apartment 4B, Block G
+                           </p>
+                        </div>
+                        <div class="space-y-1">
+                           <label class="text-md font-light text-slate-300"
+                              >Email Address</label
+                           >
+                           <p class="text-md font-medium text-slate-300">
+                              b.olawale@example.com
+                           </p>
+                        </div>
+                        <div class="space-y-1">
+                           <label class="text-md font-light text-slate-300"
+                              >Phone Number</label
+                           >
+                           <p class="text-md font-medium text-slate-300">
+                              +234 802 000 1122
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Meter Preferences -->
+                  <div
+                     class="lg:col-span-4 bg-white/10 rounded-xl p-4 shadow-md transition-all flex flex-col justify-between"
+                  >
+                     <div>
+                        <h2 class="text-md font-bold text-cyan-300 mb-stack-md">
+                           Preferences
+                        </h2>
+                        <div class="space-y-1">
+                           <div class="flex items-center justify-between">
+                              <div>
+                                 <p class="text-md font-bold text-slate-300">
+                                    Low Balance Alerts
+                                 </p>
+                                 <p class="text-[12px] text-slate-300">
+                                    SMS, Email & Push
+                                 </p>
+                              </div>
+                              <label class="switch">
+                                 <input checked="" type="checkbox" />
+                                 <span class="slider"></span>
+                              </label>
+                           </div>
+                           <div class="space-y-2">
+                              <label class="text-md font-light text-slate-300"
+                                 >Alert Threshold</label
+                              >
+                              <div class="relative">
+                                 <input
+                                    class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-lg font-mono text-cyan-300 focus:outline-none"
+                                    type="text"
+                                    value="10"
+                                 />
+                                 <span
+                                    class="absolute right-4 top-1/2 -translate-y-1/2 text-md text-slate-300"
+                                    >kWh</span
+                                 >
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Payment Methods -->
+                  <div
+                     class="lg:col-span-12 bg-white/10 rounded-xl p-4 shadow-md transition-all"
+                  >
+                     <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-md font-bold text-cyan-300">
+                           Payment Methods
+                        </h2>
+                        <button
+                           class="bg-white/10 text-cyan-300 border border-white/20 px-4 py-2 rounded-lg text-label-md font-semibold flex items-center hover:bg-white/20 transition-all"
+                        >
+                           <i
+                              data-lucide="credit-card"
+                              class="w-4 h-4 mr-2"
+                           ></i>
+                           Add New
+                        </button>
+                     </div>
+                     <div class="flex flex-wrap gap-4">
+                        <div
+                           class="flex-1 min-w-70 bg-white/5 rounded-xl p-4 border border-white/5 flex items-center gap-4"
+                        >
+                           <div
+                              class="w-12 h-8 bg-black/40 rounded flex items-center justify-center"
+                           >
+                              <span
+                                 class="text-[10px] font-bold text-white italic"
+                                 >VISA</span
+                              >
+                           </div>
+                           <div class="flex-1">
+                              <p class="text-md text-slate-300">
+                                 •••• •••• •••• 4492
+                              </p>
+                              <p class="text-[12px] text-slate-300">
+                                 Expires 09/26
+                              </p>
+                           </div>
+                           <span
+                              class="px-2 py-1 bg-white/20 text-green-300 text-[10px] font-bold rounded uppercase"
+                              >Default</span
+                           >
+                        </div>
+                        <div
+                           class="flex-1 min-w-70 bg-white/5 rounded-xl p-4 border border-white/5 flex items-center gap-4 opacity-70 grayscale hover:grayscale-0 transition-all cursor-pointer"
+                        >
+                           <div
+                              class="w-12 h-8 bg-black/40 rounded flex items-center justify-center"
+                           >
+                              <span class="text-[10px] font-bold text-white"
+                                 >BANK</span
+                              >
+                           </div>
+                           <div class="flex-1">
+                              <p class="text-md text-slate-300">
+                                 GTBank Savings
+                              </p>
+                              <p class="text-[12px] text-slate-300">
+                                 Acc: ••••8812
+                              </p>
+                           </div>
+                           <button
+                              class="text-slate-300 hover:text-red-500 transition-colors"
+                           >
+                              <i data-lucide="trash-2" class="w-4 h-4"></i>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Security & Footer -->
+                  <div
+                     class="lg:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-4"
+                  >
+                     <!-- Security -->
+                     <div
+                        class="bg-white/10 rounded-xl p-4 shadow-md transition-all"
+                     >
+                        <h2 class="text-md text-cyan-300 font-bold mb-4">
+                           Security
+                        </h2>
+                        <div class="space-y-stack-md">
+                           <button
+                              class="w-full flex items-center justify-between p-3 bg-white/5 rounded-lg hover:bg-white/15 transition-colors"
+                           >
+                              <div class="flex items-center gap-3">
+                                 <i
+                                    data-lucide="key-round"
+                                    class="w-5 h-5 text-slate-300"
+                                 ></i>
+                                 <span class="text-md text-slate-300"
+                                    >Change Password</span
+                                 >
+                              </div>
+                              <i
+                                 data-lucide="chevron-right"
+                                 class="w-5 h-5 text-slate-300"
+                              ></i>
+                           </button>
+                           <div
+                              class="flex items-center justify-between p-3 bg-white/5 mt-3 rounded-lg"
+                           >
+                              <div class="flex items-center gap-3">
+                                 <i
+                                    data-lucide="shield-check"
+                                    class="w-5 h-5 text-slate-300"
+                                 ></i>
+                                 <div>
+                                    <p class="text-slate-300">
+                                       Two-Factor Auth
+                                    </p>
+                                    <p class="text-[12px] text-slate-300">
+                                       Secure login via SMS
+                                    </p>
+                                 </div>
+                              </div>
+                              <label class="switch">
+                                 <input type="checkbox" />
+                                 <span class="slider"></span>
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Support & Info -->
+                     <div
+                        class="bg-white/10 rounded-xl p-4 shadow-md transition-all flex flex-col"
+                     >
+                        <h2 class="text-md font-bold text-cyan-300 mb-4">
+                           Help & Info
+                        </h2>
+                        <div class="space-y-1 flex-1">
+                           <a
+                              class="flex items-center gap-3 p-3 text-slate-200 hover:text-slate-400 transition-colors"
+                              href="#"
+                           >
+                              <i data-lucide="help-circle" class="w-5 h-5"></i>
+                              <span class="text-slate-200"
+                                 >Visit Support Center</span
+                              >
+                           </a>
+                           <a
+                              class="flex items-center gap-3 p-3 text-slate-200 hover:text-slate-400 transition-colors"
+                              href="#"
+                           >
+                              <i data-lucide="file-text" class="w-5 h-5"></i>
+                              <span class="text-slate-200"
+                                 >Terms & Privacy Policy</span
+                              >
+                           </a>
+                        </div>
+                        <div
+                           class="mt-2 pt-4 border-t border-white/5 flex items-center justify-between text-[12px] text-slate-200"
+                        >
+                           <span>App Version 2.4.1 (Build 882)</span>
+                           <span class="flex items-center gap-1">
+                              <span
+                                 class="w-2 h-2 rounded-full bg-green-300 animate-pulse"
+                              ></span>
+                              Systems Active
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </main>
+
+         <script src="./node_modules/lucide/dist/umd/lucide.min.js"></script>
+         <script src="./js/lucide.min.js"></script>
+         <script>
+            lucide.createIcons();
+         </script>
+         <script type="module" src="/src/main.js"></script>
+      </body>
+   </html>
+</html>
